@@ -284,7 +284,7 @@ void loop()
       if (!success) return;
     }
     //SUCCESS!
-    digitalWrite(successPin,HIGH);
+    tone(successPin,440,1000);
   }
   delay(100);
 }
