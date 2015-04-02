@@ -1,15 +1,18 @@
 const int ledPin = 9;    
 
-void setup() {
+void setup() 
+{
   pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-  for (int fadeValue = 0 ; fadeValue <= 255; ++fadeValue) {
+  for (int fadeValue = 0 ; fadeValue < 256; ++fadeValue) 
+  {
     analogWrite(ledPin, fadeValue);
     delay(10);
   }
-  for (int fadeValue = 0 ; fadeValue <= 255; --fadeValue) {
+  for (int fadeValue = 255 ; fadeValue > -1; --fadeValue) 
+  {
     analogWrite(ledPin, fadeValue);
     delay(10);
   }
