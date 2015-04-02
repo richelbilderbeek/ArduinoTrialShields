@@ -1,7 +1,7 @@
 const int successPin = 13;
 const int green = A0; 
 const int red = 12;
-const int blue = 13;
+const int blue = 11;
 
 void setup()
 {
@@ -88,7 +88,7 @@ bool StateTwo()
 // Both states must last approximately one second
 void loop()
 {
-  if (digitalRead(pin_led1) == HIGH && digitalRead(pin_led2) == LOW)
+  if (digitalRead(red) == HIGH && digitalRead(blue) == LOW && digitalRead(green) == LOW)
   {
     Serial.println("0: Start StateZero");
     {

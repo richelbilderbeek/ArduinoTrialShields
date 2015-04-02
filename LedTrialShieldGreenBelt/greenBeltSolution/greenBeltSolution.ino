@@ -1,5 +1,5 @@
-const int red = 11;
-const int green = 12;
+const int red = 12;
+const int green = 11;
 const int blue = 13;
 
 void setup() {
