@@ -94,7 +94,23 @@ void loop()
       if (!success) return;
     }
     //SUCCESS!
-    tone(pin_success,440,1000);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+  
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    //Play the first two parts of the "Oriental Riff"
   }
   delay(100);
 }

@@ -5,6 +5,7 @@
 
 */
 
+//The pins of the piezo and the LED
 const int led = A0;
 const int successPin = 12;
 
@@ -15,26 +16,32 @@ int check = 0;
 
 void setup() {
   Serial.begin(9600);
+  Serial.println("Start Trial");
+  //The LED is an input, the piezo an output
   pinMode(led,INPUT);
   pinMode(successPin,OUTPUT);
-  Serial.println("Start Trial");
 }
 
-// the loop routine runs over and over again forever:
+
 void loop() 
 {
+  //Start when the LED is off
   const int sensorValue = analogRead(led);
   if(sensorValue == 0){
     delay(1000);
+    //Point A should be one second in to the fading on, so it should be more than zero
     pointA = analogRead(led);
     if(pointA > 0){
       delay(1550);
+      //Point B should be when te LED is fully on, so it should be more than point B
       pointB = analogRead(led);
       if(pointB > pointA){
         delay(1550);
+        //Point C should be one second before the LED is fully off, so it should be more than zero and less than point B
         pointC = analogRead(led);
         if(pointC > 0 && pointC < pointB){
-          ++check;
+          //If it is correct add one to check, otherwise reset check
+          ++check;  
         }
         else{
           check = 0;
@@ -49,7 +56,39 @@ void loop()
     }
   }
   
+  //When the fading worked twice; you have succeeded!
   if(check == 2){
-    tone(successPin,440,1000);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+ 
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(50);
+
+    tone(speaker, 262, 500);
+    delay(500);
+    noTone(speaker);
+    delay(10);
+  
+    tone(speaker, 262, 500);
+    delay(500);
+    noTone(speaker);
+    delay(50);
+  
+    tone(speaker, 247, 500);
+    delay(500);
+    noTone(speaker);
+    //Play the first five parts of the "Oriental Riff"
   }
 }

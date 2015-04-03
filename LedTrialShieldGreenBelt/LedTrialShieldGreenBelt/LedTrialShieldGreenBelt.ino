@@ -5,6 +5,7 @@
 
 */
 
+//Pins of the piezo and RGB LED
 const int successPin = 13;
 const int green = A0; 
 const int red = 12;
@@ -13,11 +14,12 @@ const int blue = 11;
 void setup()
 {
   Serial.begin(9600);
+  Serial.println("Trial1 start");
+  //The piezo is an output and RGB LED an input
   pinMode(successPin,OUTPUT);
   pinMode(green,INPUT);
   pinMode(red,INPUT);
   pinMode(blue,INPUT);
-  Serial.println("Trial1 start");
 }
 
 // States:
@@ -95,8 +97,10 @@ bool StateTwo()
 // All states must last approximately one second
 void loop()
 {
+  //Start when it's red
   if (digitalRead(red) == HIGH && digitalRead(blue) == LOW && digitalRead(green) == LOW)
   {
+    //Check all states
     Serial.println("0: Start StateZero");
     {
       const bool success = StateZero();
@@ -128,7 +132,33 @@ void loop()
       if (!success) return;
     }
     //SUCCESS!
-    tone(successPin, 440, 1000);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+  
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(50);
+ 
+    tone(speaker, 262, 500);
+    delay(500);
+    noTone(speaker);
+    delay(10);
+  
+    tone(speaker, 262, 500);
+    delay(500);
+    noTone(speaker);
+    //Play the first four parts of the "Oriental Riff"
   }
   delay(100);
 }

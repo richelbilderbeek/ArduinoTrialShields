@@ -4,7 +4,7 @@
   (C) 2015 Thijs van Beers and Richel Bilderbeek
 
 */
-
+//Piezo and the pins of the seven segment display
 const int successPin = 12;
 const int A = 2;
 const int B = 3;
@@ -17,13 +17,14 @@ const int G = 8;
 void setup() {
   Serial.begin(9600);
   Serial.println("Trial Start");
-  
+//All the seven segment pins are inputs, the piezo is an output
   for(int i=2; i!=9; ++i){
     pinMode(i, INPUT);
   }
+  pinMode(succesPin, OUTPUT);
 }
 
-  
+//Display 0 for a second, returns true when succesfull  
 bool StateZero()
 {
   int count = 0;
@@ -44,7 +45,8 @@ bool StateZero()
   }
   return true;  
 }
- 
+
+//Display 1 for a second, returns true when succesfull   
 bool StateOne()
 {
   int count = 0;
@@ -66,7 +68,8 @@ bool StateOne()
   }
   return true;  
 }
- 
+
+//Display 2 for a second, returns true when succesfull   
 bool StateTwo()
 {
   int count = 0;
@@ -88,6 +91,7 @@ bool StateTwo()
   return true;  
 }
  
+//Display 3 for a second, returns true when succesfull   
 bool StateThree()
 {
   int count = 0;
@@ -108,7 +112,8 @@ bool StateThree()
   }
   return true;  
 }
-  
+
+//Display 4 for a second, returns true when succesfull    
 bool StateFour()
 {
   int count = 0;
@@ -130,6 +135,7 @@ bool StateFour()
   return true;  
 }
 
+//Display 5 for a second, returns true when succesfull  
 bool StateFive()
 {
   int count = 0;
@@ -151,6 +157,7 @@ bool StateFive()
   return true;  
 }
     
+//Display 6 for a second, returns true when succesfull  
 bool StateSix()
 {
   int count = 0;
@@ -172,6 +179,7 @@ bool StateSix()
   return true;  
 }
 
+//Display 7 for a second, returns true when succesfull  
 bool StateSeven()
 {
   int count = 0;
@@ -193,6 +201,7 @@ bool StateSeven()
   return true;  
 }
   
+//Display 8 for a second, returns true when succesfull  
 bool StateEight()
 {
   int count = 0;
@@ -214,6 +223,7 @@ bool StateEight()
   return true;  
 }
   
+//Display 9 for a second, returns true when succesfull  
 bool StateNine()
 {
   int count = 0;
@@ -238,8 +248,10 @@ bool StateNine()
 
 void loop()
 {
+  //Start when a zero is displayed
   if (digitalRead(A) == HIGH && digitalRead(B) == HIGH && digitalRead(C) == HIGH && digitalRead(D) == HIGH && digitalRead(E) == HIGH && digitalRead(F) == HIGH && digitalRead(G) == LOW)
   {
+    //Check all states
     Serial.println("0: Start StateZero");
     {
       const bool success = StateZero();
@@ -291,7 +303,28 @@ void loop()
       if (!success) return;
     }
     //SUCCESS!
-    tone(successPin,440,1000);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+  
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(10);
+    tone(speaker, 294, 250);
+    delay(250);
+    noTone(speaker);
+    delay(50);
+  
+    tone(speaker, 262, 500);
+    delay(500);
+    noTone(speaker);
+    //Play the first three parts of the "Oriental Riff"
   }
   delay(100);
 }
