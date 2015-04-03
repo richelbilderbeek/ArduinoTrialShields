@@ -1,6 +1,6 @@
 /*
 
-  Led Trial Shield, Orange Belt
+  Led Trial Shield, White Belt
   (C) 2015 Thijs van Beers
 
 */

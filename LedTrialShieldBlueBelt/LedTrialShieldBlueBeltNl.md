@@ -6,6 +6,8 @@ Het LEDje dat op pin 9 zit, moet geleidelijk aan en dan geleidelijk aan gaan.
 
 De snelheid hiervan is tien milliseconden per lichtintensiteit.
 
+Als dit gelukt is, gaat de piezo piepen.
+
 ## Pinnnummers
 
  * Het LEDje zit op pin 9
@@ -37,6 +39,6 @@ Etsen:
 
 Alle code valt onder de GPL 3.0 licensie, zie [licensie](LICENSE).
 
- * De code van de LED Trial Shield, blauwe band, is geschreven door Thijs van Beers.
- * De code om de LED Trial Shield, blauwe band, op te lossen, is geschreven door Thijs van Beers en Richel Bilderbeek.
+ * De code van de LED Trial Shield, blauwe band, is geschreven door Thijs van Beers
+ * De code om de LED Trial Shield, blauwe band, op te lossen, is geschreven door Thijs van Beers en Richel Bilderbeek
  * Het Fritzing schema is gemaakt door Richel Bilderbeek

@@ -35,7 +35,7 @@ Etches:
 
 ## Copyright
 
-Alle code is licensed under GPL 3.0, see [licensie](LICENSE).
+All code is licensed under GPL 3.0, see [licensie](LICENSE).
 
  * Code of LED Trial Shield, Blue Belt, by Thijs van Beers.
  * Code the solve the LED Trial Shield, Blauwe Band, by Thijs van Beers en Richel Bilderbeek.
