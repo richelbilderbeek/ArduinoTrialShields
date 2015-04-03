@@ -1,6 +1,6 @@
 # ArduinoTrialShields
 
-Arduino trial shields 
+Arduino trial shields.
 
 You can also read the [FAQ](FAQ.md).
 
@@ -14,3 +14,4 @@ You can also read the [FAQ](FAQ.md).
  * ![PicFlagUk](PicFlagUk.png)[Led TrialShield, green belt](LedTrialShieldGreenBelt/LedTrialShieldGreenBeltEn.md) 
  * ![PicFlagNl](PicFlagNl.png) [Led TrialShield, blauwe band](LedTrialShieldBlueBelt/LedTrialShieldBlueBeltNl.md)
  * ![PicFlagUk](PicFlagUk.png) [Led TrialShield, blue belt](LedTrialShieldBlueBelt/LedTrialShieldBlueBeltEn.md)
+ 
