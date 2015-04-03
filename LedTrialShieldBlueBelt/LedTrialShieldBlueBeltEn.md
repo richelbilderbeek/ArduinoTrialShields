@@ -1,20 +1,20 @@
-# LED Trial Shield, Blauwe Band
+# LED Trial Shield, Blue Belt
 
-## Doel
+## Goal
 
-Het LEDje dat op pin 9 zit, moet geleidelijk aan en dan geleidelijk aan gaan.
+The LED must smoothly fade to full brightness and then smootly fade out again.
 
-De snelheid hiervan is tien milliseconden per lichtintensiteit.
+The speed at which this has to happen is ten milliseconds per light intensity level.
 
-## Pinnnummers
+## Pins
 
- * Het LEDje zit op pin 9
+ * The LEDje is connected to pin 9
 
-De piezo kun je niet aansturen.
+You cannot control the piezo
 
-## Extra informatie voor de begeleiders
+## Extra information for supervisors
 
-Etsen:
+Etches:
 
  * [LedTrialShieldBlueBelt_etch_copper_bottom_mirror.pdf](LedTrialShieldBlueBelt_etch_copper_bottom_mirror.pdf)
  * [LedTrialShieldBlueBelt_etch_copper_bottom.pdf](LedTrialShieldBlueBelt_etch_copper_bottom.pdf)
@@ -35,8 +35,8 @@ Etsen:
 
 ## Copyright
 
-Alle code valt onder de GPL 3.0 licensie, zie [licensie](LICENCE).
+Alle code is licensed under GPL 3.0, see [licensie](LICENSE).
 
- * De code van de LED Trial Shield, blauwe band, is geschreven door Thijs van Beers.
- * De code om de LED Trial Shield, blauwe band, op te lossen, is geschreven door Thijs van Beers en Richel Bilderbeek.
- * Het Fritzing schema is gemaakt door Richel Bilderbeek
+ * Code of LED Trial Shield, Blue Belt, by Thijs van Beers.
+ * Code the solve the LED Trial Shield, Blauwe Band, by Thijs van Beers en Richel Bilderbeek.
+ * Fritzing schematics by Richel Bilderbeek
