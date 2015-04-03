@@ -1,13 +1,13 @@
 /*
 
   Led Trial Shield, Green Belt
-  (C) 2015 Thijs van Beers
+  (C) 2015 Thijs van Beers and Richel Bilderbeek
 
 */
 
-const int red = 12;
-const int green = 11;
-const int blue = 13;
+const int red   = 11;
+const int green = 12;
+const int blue  = 13;
 
 void setup() {
   pinMode(red, OUTPUT);
