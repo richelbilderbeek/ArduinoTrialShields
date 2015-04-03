@@ -92,7 +92,7 @@ bool StateTwo()
   return true;  
 }
 
-// Both states must last approximately one second
+// All states must last approximately one second
 void loop()
 {
   if (digitalRead(red) == HIGH && digitalRead(blue) == LOW && digitalRead(green) == LOW)
