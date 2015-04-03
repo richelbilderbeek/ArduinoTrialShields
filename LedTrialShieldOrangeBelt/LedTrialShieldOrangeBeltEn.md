@@ -1,29 +1,29 @@
 # LED Trial Shield, Orange Belt
 
-## Doel
+## Goal
 
-Laat het zeven segmenten display tellen van nul tot en met negen. 
-Elk getal moet een seconde zichtbaar zijn.
+Make the seven segment display count from zero to nine.
+Every number must show for one second.
 
-Als dit gelukt is, gaat de piezo piepen.
+When you succeed the piezo will beep.
 
-## Pinnnummers
+## Pins
 
 ![7_segment_display_pins](7_segment_display_pins.png)
 
-De pinnen zijn zoals in het plaatje:
- * Bovenste: 2
- * Rechterzijkant, bovenste: 3
- * Rechterzijkant, onderste: 4
- * Onderste: 5
- * Linkerzijkant, onderste: 6
- * Linkerzijkant, bovenste: 7
- * Middenste: 8
- * Punt: 9 (maar die is niet nodig)
+The pins are connected as in the picture:
+ * Top: 2
+ * Rightside, top: 3
+ * Rightside, bottom: 4
+ * Bottom: 5
+ * Leftside, bottom: 6
+ * Leftside, top: 7
+ * Middle: 8
+ * Poin: 9 (but you don't need it)
 
-De piezo kun je niet aansturen.
+You cannot control the piezo.
 
-## Extra informatie voor de begeleiders
+## Extra information for supervisors
 
 Etsen:
 

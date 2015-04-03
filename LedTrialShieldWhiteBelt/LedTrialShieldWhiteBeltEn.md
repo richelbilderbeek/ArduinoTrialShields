@@ -2,15 +2,15 @@
 
 ## Goal
 
-De LED om de seconde uit en aan te laten gaan.
+Make the LED turn on and off every second.
 
-Als dit gelukt is, gaat de piezo piepen.
+When you succeed the piezo will beep.
 
 ## Pins
 
- * Het LEDje zit op pin 13
+ * The LED is connected to pin 13
 
-De piezo kun je niet aansturen.
+You cannot control the piezo.
 
 ## Extra information for supervisors
 

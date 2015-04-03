@@ -2,8 +2,17 @@
 
 ## Goal
 
+Make the LEDs light up like a traffic light:
+
+ *Red for one second
+ *Green for one second
+ *Orange for one second (mix red with green, green on half brightness)
 
 ## Pins
+
+ *The green LED is connected to pin 11
+ *The red LED is connected to pin 12
+ *The blue LED is connected to pin 13
 
 You cannot control the piezo.
 

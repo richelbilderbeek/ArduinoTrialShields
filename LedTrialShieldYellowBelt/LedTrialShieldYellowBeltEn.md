@@ -13,7 +13,7 @@ If this succeeds, the piezo will beep.
 
 You cannot control the piezo.
 
-## Extra informatie voor de begeleiders
+## Extra information for supervisors
 
 ![Prototype bij Richel van de bovenkant](LedTrialShieldYellowBeltTop.jpg)
 
