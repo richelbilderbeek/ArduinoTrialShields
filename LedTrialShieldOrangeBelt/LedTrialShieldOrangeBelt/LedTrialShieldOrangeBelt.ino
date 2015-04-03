@@ -21,7 +21,7 @@ void setup() {
   for(int i=2; i!=9; ++i){
     pinMode(i, INPUT);
   }
-  pinMode(succesPin, OUTPUT);
+  pinMode(successPin, OUTPUT);
 }
 
 //Display 0 for a second, returns true when succesfull  
@@ -303,27 +303,27 @@ void loop()
       if (!success) return;
     }
     //SUCCESS!
-    tone(speaker, 294, 250);
+    tone(successPin, 294, 250);
     delay(250);
-    noTone(speaker);
+    noTone(successPin);
     delay(10);
-    tone(speaker, 294, 250);
+    tone(successPin, 294, 250);
     delay(250);
-    noTone(speaker);
+    noTone(successPin);
     delay(10);
   
-    tone(speaker, 294, 250);
+    tone(successPin, 294, 250);
     delay(250);
-    noTone(speaker);
+    noTone(successPin);
     delay(10);
-    tone(speaker, 294, 250);
+    tone(successPin, 294, 250);
     delay(250);
-    noTone(speaker);
+    noTone(successPin);
     delay(50);
   
-    tone(speaker, 262, 500);
+    tone(successPin, 262, 500);
     delay(500);
-    noTone(speaker);
+    noTone(successPin);
     //Play the first three parts of the "Oriental Riff"
   }
   delay(100);

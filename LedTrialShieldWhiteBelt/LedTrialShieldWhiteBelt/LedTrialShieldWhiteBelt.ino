@@ -11,7 +11,7 @@ const int pin_led1 = A0; //The pin 13 of the student
 void setup()
 {
   Serial.begin(9600);
-  pinMode(pin_led_success,OUTPUT);
+  pinMode(successPin,OUTPUT);
   pinMode(pin_led1,INPUT);
   Serial.println("Trial1 start");
 }
@@ -92,13 +92,13 @@ void loop()
       if (!success) return;
     }
     //SUCCESS!
-    tone(speaker, 294, 250);
+    tone(successPin, 294, 250);
     delay(250);
-    noTone(speaker);
+    noTone(successPin);
     delay(10);
-    tone(speaker, 294, 250);
+    tone(successPin, 294, 250);
     delay(250);
-    noTone(speaker);
+    noTone(successPin);
     //Play the first part of the "Oriental Riff"
   }
   delay(100);

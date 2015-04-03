@@ -58,37 +58,37 @@ void loop()
   
   //When the fading worked twice; you have succeeded!
   if(check == 2){
-    tone(speaker, 294, 250);
+    tone(successPin, 294, 250);
     delay(250);
-    noTone(speaker);
+    noTone(successPin);
     delay(10);
-    tone(speaker, 294, 250);
+    tone(successPin, 294, 250);
     delay(250);
-    noTone(speaker);
+    noTone(successPin);
     delay(10);
  
-    tone(speaker, 294, 250);
+    tone(successPin, 294, 250);
     delay(250);
-    noTone(speaker);
+    noTone(successPin);
     delay(10);
-    tone(speaker, 294, 250);
+    tone(successPin, 294, 250);
     delay(250);
-    noTone(speaker);
+    noTone(successPin);
     delay(50);
 
-    tone(speaker, 262, 500);
+    tone(successPin, 262, 500);
     delay(500);
-    noTone(speaker);
+    noTone(successPin);
     delay(10);
   
-    tone(speaker, 262, 500);
+    tone(successPin, 262, 500);
     delay(500);
-    noTone(speaker);
+    noTone(successPin);
     delay(50);
   
-    tone(speaker, 247, 500);
+    tone(successPin, 247, 500);
     delay(500);
-    noTone(speaker);
+    noTone(successPin);
     //Play the first five parts of the "Oriental Riff"
   }
 }
