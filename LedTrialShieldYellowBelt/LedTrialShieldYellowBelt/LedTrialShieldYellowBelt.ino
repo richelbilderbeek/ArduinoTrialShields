@@ -5,14 +5,14 @@
 
 */
 
-const int pin_led_success = 13;
+const int pin_success = 12;
 const int pin_led1 = A0; //The pin 13 of the student
 const int pin_led2 = A1; //The pin 12 of the student
 
 void setup()
 {
   Serial.begin(9600);
-  pinMode(pin_led_success,OUTPUT);
+  pinMode(pin_success,OUTPUT);
   pinMode(pin_led1,INPUT);
   pinMode(pin_led2,INPUT);
   Serial.println("Led Trial Shield, Yellow Belt, start");
@@ -94,7 +94,7 @@ void loop()
       if (!success) return;
     }
     //SUCCESS!
-    digitalWrite(pin_led_success,HIGH);
+    tone(pin_success,440,1000);
   }
   delay(100);
 }
