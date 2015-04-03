@@ -12,8 +12,8 @@ Als dit gelukt is, gaat de piezo piepen.
 
 ## Pinnnummers
 
- * Het rode LEDje zit op pin 11
- * Het groene LEDje zit op pin 12
+ * Het groene LEDje zit op pin 11
+ * Het rode LEDje zit op pin 12
  * Het blauwe LEDje zit op pin 13
 
 De piezo kun je niet aansturen.
