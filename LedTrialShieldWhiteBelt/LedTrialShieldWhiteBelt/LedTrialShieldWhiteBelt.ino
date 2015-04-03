@@ -1,3 +1,10 @@
+/*
+
+  Led Trial Shield, Orange Belt
+  (C) 2015 Thijs van Beers and Richel Bilderbeek
+
+*/
+
 const int successPin = 13;
 const int pin_led1 = A0; //The pin 13 of the student
 

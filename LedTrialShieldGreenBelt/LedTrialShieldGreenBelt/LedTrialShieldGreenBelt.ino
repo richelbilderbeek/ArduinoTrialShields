@@ -1,3 +1,10 @@
+/*
+
+  Led Trial Shield, Green Belt
+  (C) 2015 Thijs van Beers and Richel Bilderbeek
+
+*/
+
 const int successPin = 13;
 const int green = A0; 
 const int red = 12;

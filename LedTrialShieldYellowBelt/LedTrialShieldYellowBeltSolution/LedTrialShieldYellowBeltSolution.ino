@@ -1,3 +1,10 @@
+/*
+
+  Led Trial Shield, Yellow Belt
+  (C) 2015 Richel Bilderbeek
+
+*/
+
 const int pin_led1 = 13;
 const int pin_led2 = 12;
 

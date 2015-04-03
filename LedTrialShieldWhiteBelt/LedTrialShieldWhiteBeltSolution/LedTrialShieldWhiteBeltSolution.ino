@@ -1,3 +1,9 @@
+/*
+
+  Led Trial Shield, Orange Belt
+  (C) 2015 Thijs van Beers
+
+*/
 
 void setup() {
   pinMode(13, OUTPUT);

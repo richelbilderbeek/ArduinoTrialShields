@@ -1,3 +1,10 @@
+/*
+
+  Led Trial Shield, Blue Belt
+  (C) 2015 Thijs van Beers and Richel Bilderbeek
+
+*/
+
 const int ledPin = 9;    
 
 void setup() 

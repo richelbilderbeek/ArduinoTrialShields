@@ -1,3 +1,10 @@
+/*
+
+  Led Trial Shield, Orange Belt
+  (C) 2015 Thijs van Beers
+
+*/
+
 #include <SevenSeg.h>
 
 SevenSeg Display = SevenSeg(2,3,4,5,6,7,8,9);

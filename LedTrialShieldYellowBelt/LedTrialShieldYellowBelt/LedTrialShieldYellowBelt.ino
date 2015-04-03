@@ -1,3 +1,10 @@
+/*
+
+  Led Trial Shield, Yellow Belt
+  (C) 2015 Richel Bilderbeek
+
+*/
+
 const int pin_led_success = 13;
 const int pin_led1 = A0; //The pin 13 of the student
 const int pin_led2 = A1; //The pin 12 of the student
@@ -8,7 +15,7 @@ void setup()
   pinMode(pin_led_success,OUTPUT);
   pinMode(pin_led1,INPUT);
   pinMode(pin_led2,INPUT);
-  Serial.println("Trial1 start");
+  Serial.println("Led Trial Shield, Yellow Belt, start");
 }
 
 // States:
