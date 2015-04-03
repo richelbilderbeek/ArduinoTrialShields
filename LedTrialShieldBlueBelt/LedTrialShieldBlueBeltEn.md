@@ -8,9 +8,9 @@ The speed at which this has to happen is ten milliseconds per light intensity le
 
 ## Pins
 
- * The LEDje is connected to pin 9
+ * The LED is connected to pin 9
 
-You cannot control the piezo
+You cannot control the piezo.
 
 ## Extra information for supervisors
 
@@ -37,6 +37,6 @@ Etches:
 
 All code is licensed under GPL 3.0, see [licensie](LICENSE).
 
- * Code of LED Trial Shield, Blue Belt, by Thijs van Beers.
- * Code the solve the LED Trial Shield, Blauwe Band, by Thijs van Beers en Richel Bilderbeek.
+ * Code of LED Trial Shield, Blue Belt, by Thijs van Beers
+ * Code the solve the LED Trial Shield, Blue Belt, by Thijs van Beers en Richel Bilderbeek
  * Fritzing schematics by Richel Bilderbeek
