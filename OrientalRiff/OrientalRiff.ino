@@ -6,64 +6,64 @@ With every belt you hear a little more of the tune until, at the black belt, you
 The letters indicate what note is played and how many times.
 */
 
-const int speaker = 13;
+const int successPin = 13;
 
 void setup() {
-  pinMode(speaker, OUTPUT);
+  pinMode(successPin, OUTPUT);
 }
 
 void loop() {
   //DDDD  (D4)
-  tone(speaker, 294, 250);
+  tone(successPin, 294, 250);
   delay(250);
-  noTone(speaker);
+  noTone(successPin);
   delay(10);
-  tone(speaker, 294, 250);
+  tone(successPin, 294, 250);
   delay(250);
-  noTone(speaker);
+  noTone(successPin);
   delay(10);
   //1
-  tone(speaker, 294, 250);
+  tone(successPin, 294, 250);
   delay(250);
-  noTone(speaker);
+  noTone(successPin);
   delay(10);
-  tone(speaker, 294, 250);
+  tone(successPin, 294, 250);
   delay(250);
-  noTone(speaker);
+  noTone(successPin);
   
   delay(50);
   //2
   
   //CC  (C4)
-  tone(speaker, 262, 500);
+  tone(successPin, 262, 500);
   delay(500);
-  noTone(speaker);
+  noTone(successPin);
   delay(10);
   //3
-  tone(speaker, 262, 500);
+  tone(successPin, 262, 500);
   delay(500);
-  noTone(speaker);
+  noTone(successPin);
   
   delay(50);
   //4
   
   //BB  (B3)
-  tone(speaker, 247, 500);
+  tone(successPin, 247, 500);
   delay(500);
-  noTone(speaker);
+  noTone(successPin);
   delay(10);
   //5
-  tone(speaker, 247, 500);
+  tone(successPin, 247, 500);
   delay(500);
-  noTone(speaker);
+  noTone(successPin);
   
   delay(50);
   //6
   
   //C  (C4)
-  tone(speaker, 262, 500);
+  tone(successPin, 262, 500);
   delay(500);
-  noTone(speaker);
+  noTone(successPin);
   //7
   
   delay(5000);  
