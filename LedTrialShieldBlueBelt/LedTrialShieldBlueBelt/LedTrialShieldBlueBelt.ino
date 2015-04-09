@@ -22,27 +22,40 @@ void setup() {
   pinMode(successPin,OUTPUT);
 }
 
+int GetPwm(const int pin_read)
+{
+  const int dist_micro_sec_int = pulseIn(pin_read,HIGH,1000);
+  if (dist_micro_sec_int == 0){
+    if(digitalRead(pin_read) == LOW) return 0;
+    else if(digitalRead(pin_read) == HIGH) return 255;
+  }
+  const double dist_micro_sec = static_cast<double>(dist_micro_sec_int);
+  const double period_micro_sec = (1.0 / 490.0) * (1000.0 * 1000.0); //microsecond
+  const double f = dist_micro_sec / period_micro_sec * 1.151; //compensate for rounding fault
+  const double pwm = f * 255.0;
+  return static_cast<int>(pwm);
+}
 
 void loop() 
 {
   //Start when the LED is off
-  const int sensorValue = analogRead(led);
-  if(sensorValue == 0){
-    delay(1000);
+  const int ledValue = GetPwm(led);
+  if(ledValue == 0){
+    delay(1275);
     Serial.println("Start poin A");
-    //Point A should be one second in to the fading on, so it should be more than zero
-    pointA = analogRead(led);
-    if(pointA > 0){
-      delay(1550);
+    //Point A should be half way in to the fading on, so it should be 128
+    pointA = GetPwm(led);
+    if(pointA > 118 && pointA < 138){
+      delay(1275);
       Serial.println("Start poin B");
-      //Point B should be when te LED is fully on, so it should be more than point B
-      pointB = analogRead(led);
-      if(pointB > pointA){
-        delay(1550);
+      //Point B should be when te LED is fully on, so it should be 255
+      pointB = GetPwm(led);
+      if(pointB > 245){
+        delay(1275);
         Serial.println("Start poin C");
-        //Point C should be one second before the LED is fully off, so it should be more than zero and less than point B
-        pointC = analogRead(led);
-        if(pointC > 0 && pointC < pointB){
+        //Point C should be half way before the LED is fully off, so it should be 128
+        pointC = GetPwm(led);
+        if(pointC > 118 && pointC < 138){
           //If it is correct add one to check, otherwise reset check
           Serial.println("All points were correct!");
           ++check;  
