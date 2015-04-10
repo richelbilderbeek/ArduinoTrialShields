@@ -26,63 +26,76 @@ void setup() {
   pinMode(successPin,OUTPUT);
 }
 
+int GetPwm(const int pin_read)
+{
+  const int dist_micro_sec_int = pulseIn(pin_read,HIGH,1000);
+  if (dist_micro_sec_int == 0){
+    if(digitalRead(pin_read) == LOW) return 0;
+    else if(digitalRead(pin_read) == HIGH) return 255;
+  }
+  const double dist_micro_sec = static_cast<double>(dist_micro_sec_int);
+  const double period_micro_sec = (1.0 / 490.0) * (1000.0 * 1000.0); //microsecond
+  const double f = dist_micro_sec / period_micro_sec * 1.151; //compensate for rounding fault
+  const double pwm = f * 255.0;
+  return static_cast<int>(pwm);
+}
 
 void loop() 
 {
   //Start when the LED is red
-  const int redValue = analogRead(red);
-  const int greenValue = analogRead(green);
-  const int blueValue = analogRead(blue);
+  const int redValue = GetPwm(red);
+  const int greenValue = GetPwm(green);
+  const int blueValue = GetPwm(blue);
   
-  if(redValue == 1023 && greenValue == 0 && blueValue == 0){
+  if(redValue == 255 && greenValue == 0 && blueValue == 0){
     delay(850);
     Serial.println("Start point 0");
-    //Point 0 should be a third of the way in to fading to full green, so red should be bigger than green and green should be bigger than zero and blue should be zero
-    R[0] = analogRead(red);
-    G[0] = analogRead(green);
-    B[0] = analogRead(blue);
+    //Point 0 should be a third of the way in to fading to full green, so red should be 170 and green 85 and blue should be 0
+    R[0] = GetPwm(red);
+    G[0] = GetPwm(green);
+    B[0] = GetPwm(blue);
     
-    if(R[0] > G[0] && G[0] > 0 && B[0] == 0){
+    if(R[0] > 160 && R[0] < 180 && G[0] > 75 && G[0] < 95 && B[0] == 0){
       delay(850);
       Serial.println("Start point 1");
-      //Point 1 should be two thirds of the way in to fading to full green, so red should be smaller than green and red should be bigger than zero and blue should be zero
-      R[1] = analogRead(red);
-      G[1] = analogRead(green);
-      B[1] = analogRead(blue);
+      //Point 1 should be two thirds of the way in to fading to full green, so red should be 85 and green should be 170 and blue should be zero
+      R[1] = GetPwm(red);
+      G[1] = GetPwm(green);
+      B[1] = GetPwm(blue);
       
-      if(R[1] < G[1] && R[1] > 0 && B[1] == 0){
+      if(R[0] > 75 && R[0] < 95 && G[0] > 160 && G[0] < 180 && B[1] == 0){
         delay(850);
         Serial.println("Start point 2");
-        //Point 2 should be a third of the way in to fading to full blue, so green should be bigger than blue and blue should be bigger than zero and red should be zero
-        R[2] = analogRead(red);
-        G[2] = analogRead(green);
-        B[2] = analogRead(blue);
+        //Point 2 should be a third of the way in to fading to full blue, so green should be 170 and blue 85 and red should be 0
+        R[2] = GetPwm(red);
+        G[2] = GetPwm(green);
+        B[2] = GetPwm(blue);
         
-        if(G[2] > B[2] && B[2] > 0 && R[2] == 0){
+        if(G[0] > 160 && G[0] < 180 && B[0] > 75 && B[0] < 95 && R[2] == 0){
           delay(850);
           Serial.println("Start point 3");
-          //Point 3 should be two thirds of the way in to fading to full blue, so green should be smaller than blue and green should be bigger than zero and red should be zero
-          R[3] = analogRead(red);
-          G[3] = analogRead(green);
-          B[3] = analogRead(blue);
+          //Point 3 should be two thirds of the way in to fading to full blue, so green should be 85 and blue should be 170 and red should be 0
+          R[3] = GetPwm(red);
+          G[3] = GetPwm(green);
+          B[3] = GetPwm(blue);
           
-          if(G[3] < B[3] && G[3] > 0 && R[3] == 0){
+          if(G[0] > 75 && G[0] < 95 && B[0] > 160 && B[0] < 180 && R[3] == 0){
             delay(850);
             Serial.println("Start point 4");
-            //Point 4 should be a third of the way in to fading to full red, so blue should be bigger than red and red should be bigger than zero and green should be zero
-            R[4] = analogRead(red);
-            G[4] = analogRead(green);
-            B[4] = analogRead(blue);
+            //Point 4 should be a third of the way in to fading to full red, so blue should be 170 and red should be 85 and green should be 0
+            R[4] = GetPwm(red);
+            G[4] = GetPwm(green);
+            B[4] = GetPwm(blue);
             
-            if(B[4] > R[4] && R[4] > 0 && G[4] == 0){
+            if(R[0] > 75 && R[0] < 95 && B[0] > 160 && B[0] < 180 && G[4] == 0){
               delay(850);
               Serial.println("Start point 5");
-              //Point 5 should be two thirds of the way in to fading to full red, so blue should be smaller than red and blue should be bigger than zero and green should be zero
-              R[5] = analogRead(red);
-              G[5] = analogRead(green);
-              B[5] = analogRead(blue);
+              //Point 5 should be two thirds of the way in to fading to full red, so blue should be 85 and red should be 170 and green should be 0
+              R[5] = GetPwm(red);
+              G[5] = GetPwm(green);
+              B[5] = GetPwm(blue);
               
-              if(B[5] < R[5] && B[5] > 0 && G[5] == 0){
+              if(R[0] > 160 && R[0] < 180 && B[0] > 75 && B[0] < 95 && G[5] == 0){
                 //If everything is correct add one to check, when something is incorrect reset check
                 Serial.println("All points were correct!");
                 ++check;
