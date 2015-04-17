@@ -6,7 +6,7 @@
 */
 
 //The pins of the piezo and the LED
-const int led = A0;
+const int led = 7;
 const int successPin = 12;
 
 int pointA;
@@ -24,14 +24,14 @@ void setup() {
 
 int GetPwm(const int pin_read)
 {
-  const int dist_micro_sec_int = pulseIn(pin_read,HIGH,1000);
+  const int dist_micro_sec_int = pulseIn(pin_read,HIGH);
   if (dist_micro_sec_int == 0){
     if(digitalRead(pin_read) == LOW) return 0;
     else if(digitalRead(pin_read) == HIGH) return 255;
   }
   const double dist_micro_sec = static_cast<double>(dist_micro_sec_int);
   const double period_micro_sec = (1.0 / 490.0) * (1000.0 * 1000.0); //microsecond
-  const double f = dist_micro_sec / period_micro_sec * 1.151; //compensate for rounding fault
+  const double f = dist_micro_sec / period_micro_sec; 
   const double pwm = f * 255.0;
   return static_cast<int>(pwm);
 }
