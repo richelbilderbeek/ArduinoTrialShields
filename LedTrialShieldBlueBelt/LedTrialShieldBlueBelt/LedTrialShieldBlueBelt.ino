@@ -6,7 +6,7 @@
 */
 
 //The pins of the piezo and the LED
-const int led = 7;
+const int led = A0;
 const int successPin = 12;
 
 int pointA;
