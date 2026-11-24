@@ -1,6 +1,6 @@
 [project]
 site_name = "Arduino TrialShields"
-site_url = "https://richelbilderbeek.github.io/arduinotrialshields/"
+site_url = "https://richelbilderbeek.github.io/ArduinoTrialShields/"
 repo_url = "https://github.com/richelbilderbeek/ArduinoTrialShields"
 edit_uri = "blob/master/docs/"
 
