@@ -1,19 +1,19 @@
-# LED Trial Shield, Yellow Belt
+# LED Trial Shield, Gele Band
 
-## Goal
+## Doel
 
-Let the LEDs blink alternately, each LED being on for a second.
+De LEDjes om de seconde omstebeurt laten branden.
 
-If this succeeds, the piezo will beep.
+Als dit gelukt is, gaat de piezo piepen.
 
-## Pins
+## Pinnnummers
 
- * The left rode LEDje is at pin 13
- * The right red LEDje is at pin 12
+ * Het linker rode LEDje zit op pin 13
+ * Het rechter rode LEDje zit op pin 12
 
-You cannot control the piezo.
+De piezo kun je niet aansturen.
 
-## Extra information for supervisors
+## Extra informatie voor de begeleiders
 
 ![Prototype bij Richel van de bovenkant](LedTrialShieldYellowBeltTop.jpg)
 
@@ -46,8 +46,8 @@ Etsen:
 
 ## Copyright
 
-All code is licensed under GPL 3.0, see [licensie](LICENSE).
+Alle code valt onder de GPL 3.0 licensie, zie [licensie](https://github.com/richelbilderbeek/ArduinoTrialShields/blob/master/LedTrialShieldYellowBelt/LICENSE).
 
- * Code of LED Trial Shield, Yellow Belt, by Richel Bilderbeek
- * Code the solve the LED Trial Shield, Yellow Belt, by Richel Bilderbeek
- * Fritzing schematics by Richel Bilderbeek
+ * De code van de LED Trial Shield, gele band, is geschreven door Richel Bilderbeek
+ * De code om de LED Trial Shield, gele band, op te lossen, is geschreven door Richel Bilderbeek
+ * Het Fritzing schema is gemaakt door Richel Bilderbeek

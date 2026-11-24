@@ -1,24 +1,26 @@
-# LED Trial Shield, Green Belt
+# LED Trial Shield, Groene Band
 
-## Goal
+## Doel
 
-Make the LEDs light up like a traffic light:
+De LEDjes een stoplicht laten maken:
 
- *Red for one second
- *Green for one second
- *Orange for one second (mix red with green, green on half brightness)
+ * Een seconde rood
+ * Een second groen
+ * Een second oranje (rood samen met groen, groen op halve sterkte)
+  
+Als dit gelukt is, gaat de piezo piepen.
 
-## Pins
+## Pinnnummers
 
- *The green LED is connected to pin 11
- *The red LED is connected to pin 12
- *The blue LED is connected to pin 13
+ * Het groene LEDje zit op pin 11
+ * Het rode LEDje zit op pin 12
+ * Het blauwe LEDje zit op pin 13
 
-You cannot control the piezo.
+De piezo kun je niet aansturen.
 
-## Extra information for supervisors
+## Extra informatie voor de begeleiders
 
-Etches:
+Etsen:
 
  * [LedTrialShieldGreenBelt_etch_copper_bottom_mirror.pdf](LedTrialShieldGreenBelt_etch_copper_bottom_mirror.pdf)
  * [LedTrialShieldGreenBelt_etch_copper_bottom.pdf](LedTrialShieldGreenBelt_etch_copper_bottom.pdf)
@@ -39,8 +41,8 @@ Etches:
 
 ## Copyright
 
-All code is licensed under GPL 3.0, see [licensie](LICENSE).
+Alle code valt onder de GPL 3.0 licensie, zie [licensie](https://github.com/richelbilderbeek/ArduinoTrialShields/blob/master/LedTrialShieldGreenBelt/LICENSE).
 
- * Code of LED Trial Shield, Green Belt, by Thijs van Beers and Richel Bilderbeek
- * Code the solve the LED Trial Shield, Green Belt, by Thijs van Beers
- * Fritzing schematics by Richel Bilderbeek
+ * De code van de LED Trial Shield, groene band, is geschreven door Thijs van Beers en Richel Bilderbeek
+ * De code om de LED Trial Shield, groene band, op te lossen, is geschreven door Thijs van Beers
+ * Het Fritzing schema is gemaakt door Richel Bilderbeek

@@ -35,7 +35,7 @@ Etsen:
 
 ## Copyright
 
-Alle code valt onder de GPL 3.0 licensie, zie [licensie](LICENSE).
+Alle code valt onder de GPL 3.0 licensie, zie [licensie](https://github.com/richelbilderbeek/ArduinoTrialShields/blob/master/LedTrialShieldWhiteBelt/LICENSE).
 
  * De code van de LED Trial Shield, witte band, is geschreven door Thijs van Beers en Richel Bilderbeek
  * De code om de LED Trial Shield, witte band, op te lossen, is geschreven door Thijs van Beers

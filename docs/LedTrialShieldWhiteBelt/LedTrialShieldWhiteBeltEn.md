@@ -35,7 +35,7 @@ Etsen:
 
 ## Copyright
 
-All code is licensed under GPL 3.0, see [licensie](LICENSE).
+All code is licensed under GPL 3.0, see [licensie](https://github.com/richelbilderbeek/ArduinoTrialShields/blob/master/LedTrialShieldWhiteBelt/LICENSE).
 
  * Code of LED Trial Shield, White Belt, by Thijs van Beers and Richel Bilderbeek
  * Code the solve the LED Trial Shield, White Belt, by Thijs van Beers

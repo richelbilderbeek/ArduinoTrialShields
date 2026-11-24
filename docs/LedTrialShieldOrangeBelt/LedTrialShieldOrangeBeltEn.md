@@ -46,7 +46,7 @@ Etsen:
 
 ## Copyright
 
-All code is licensed under GPL 3.0, see [licensie](LICENSE).
+All code is licensed under GPL 3.0, see [licensie](https://github.com/richelbilderbeek/ArduinoTrialShields/blob/master/LedTrialShieldOrangeBelt/LICENSE).
 
  * Code of LED Trial Shield, Orange Belt, by Richel Bilderbeek
  * Code the solve the LED Trial Shield, Orange Band, by Richel Bilderbeek

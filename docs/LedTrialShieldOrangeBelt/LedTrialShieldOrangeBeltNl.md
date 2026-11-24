@@ -46,7 +46,7 @@ Etsen:
 
 ## Copyright
 
-Alle code valt onder de GPL 3.0 licensie, zie [licensie](LICENSE).
+Alle code valt onder de GPL 3.0 licensie, zie [licensie](https://github.com/richelbilderbeek/ArduinoTrialShields/blob/master/LedTrialShieldOrangeBelt/LICENSE).
 
  * De code van de LED Trial Shield, oranje band, is geschreven door Richel Bilderbeek
  * De code om de LED Trial Shield, oranje band, op te lossen, is geschreven door Richel Bilderbeek
